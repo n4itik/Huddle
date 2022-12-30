@@ -397,6 +397,7 @@ input:focus:invalid + div::before {
 
   .content img {
     max-width: 30%;
+    margin-bottom: 0;
   }
 
   .content div {
