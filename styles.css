@@ -1,3 +1,4 @@
+/* Import Font */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
 
 /*
@@ -70,6 +71,8 @@ h6 {
   --ff-body: "Open Sans", sans-serif;
 }
 
+/* <-- OVERALL STYLING --> */
+
 body {
   font-family: var(--ff-body);
   font-weight: 400;
@@ -91,6 +94,10 @@ h2 {
   font-weight: 700;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 ul {
   list-style-type: none;
   padding-left: 0;
@@ -110,6 +117,196 @@ footer h2 {
   color: white;
   text-transform: uppercase;
   margin-bottom: 1rem;
+}
+
+input {
+  outline: none;
+  border: 2px solid white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+input:focus:invalid {
+  border: 2px solid var(--clr-primary-light-red);
+}
+
+input:focus:invalid + div::before {
+  content: "Check your email please";
+  color: var(--clr-primary-light-red);
+  font-size: 0.75rem;
+}
+
+/* <-- BUTTONS --> */
+
+.try-button {
+  font-size: 0.9rem;
+  background-color: white;
+  color: var(--clr-primary-pink);
+  border: 2px solid var(--clr-primary-pink);
+  border-radius: 1rem;
+  padding: 0.125rem 1rem;
+}
+
+.try-button:hover,
+.try-button:active {
+  color: var(--clr-primary-light-pink);
+  border-color: var(--clr-primary-light-pink);
+  cursor: pointer;
+}
+
+.start-button,
+.subscribe-button {
+  background-color: var(--clr-primary-pink);
+  color: white;
+  border: 0;
+  border-radius: 2rem;
+  padding: 0.75rem 3rem;
+  box-shadow: 0.125rem 0.125rem 0.25rem lightgrey;
+}
+
+.start-button:hover,
+.start-button:active,
+.subscribe-button:hover,
+.subscribe-button:active {
+  background-color: var(--clr-primary-light-pink);
+  cursor: pointer;
+}
+
+.start-button {
+  margin-bottom: 7rem;
+}
+
+.subscribe-button {
+  border-radius: 0.25rem;
+  padding: 0.75rem 2rem;
+  box-shadow: none;
+}
+
+/* <-- BACKGROUND --> */
+
+.background {
+  width: 100%;
+}
+
+.background-desktop {
+  display: none;
+}
+
+/* <-- TITLE SECTION --> */
+
+.logo {
+  max-width: 8rem;
+}
+
+.title {
+  margin-top: 7rem;
+  padding: 2rem;
+}
+
+.title p {
+  margin: 1rem auto 3rem;
+}
+
+.title img {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.title h2 {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+}
+
+.title ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 10rem;
+  color: grey;
+  font-size: 0.8rem;
+  margin: 3rem;
+}
+
+.title-icon {
+  max-width: 2rem;
+  align-self: flex-start;
+}
+
+/* <-- CONTENTS --> */
+
+.content {
+  padding: 2rem;
+}
+
+.content img {
+  max-width: 80%;
+  margin: 0 auto 4rem;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1rem;
+}
+
+.content-1,
+.content-3 {
+  background-color: var(--clr-neutral-pale-blue);
+}
+
+.content-2 {
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+}
+
+.content-3 {
+  padding-bottom: 5rem;
+}
+
+.foot {
+  margin: 7rem auto 10rem;
+}
+
+.foot h2 {
+  margin-bottom: 3rem;
+}
+
+/* <-- FOOTER --> */
+
+.footer-logo {
+  filter: invert(100%) sepia(77%) saturate(2%) hue-rotate(265deg)
+    brightness(109%) contrast(100%);
+  margin-bottom: 1rem;
+}
+
+.fa-brands {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.fa-square-facebook:hover,
+.fa-square-facebook:active {
+  color: #0165e1;
+}
+
+.fa-instagram:hover,
+.fa-instagram:active {
+  color: #e1306c;
+}
+
+.fa-square-twitter:hover,
+.fa-square-twitter:active {
+  color: #1d9bf0;
 }
 
 .newsletter {
@@ -151,190 +348,6 @@ footer h2 {
   margin-right: 1rem;
 }
 
-.logo {
-  max-width: 8rem;
-}
-
-.title {
-  margin-top: 7rem;
-  padding: 2rem;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-.title p {
-  margin: 1rem auto 3rem;
-}
-
-.start-button {
-  margin-bottom: 7rem;
-}
-
-.title img {
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-.title h2 {
-  font-size: 3.5rem;
-  margin-bottom: 0;
-}
-
-.title ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.title li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 10rem;
-  color: grey;
-  font-size: 0.8rem;
-  margin: 3rem;
-}
-
-.title-icon {
-  max-width: 2rem;
-  align-self: flex-start;
-}
-
-.content {
-  padding: 2rem;
-}
-
-.content img {
-  max-width: 80%;
-  margin: 0 auto 4rem;
-}
-
-.content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.content p {
-  font-size: 1rem;
-}
-
-.content-1,
-.content-3 {
-  background-color: var(--clr-neutral-pale-blue);
-}
-
-.content-2 {
-  margin-top: 7rem;
-  margin-bottom: 4rem;
-}
-
-.content-3 {
-  padding-bottom: 5rem;
-}
-
-.background {
-  width: 100%;
-}
-
-.background-desktop {
-  display: none;
-}
-
-.foot {
-  margin: 7rem auto 10rem;
-}
-
-.foot h2 {
-  margin-bottom: 3rem;
-}
-
-.try-button {
-  font-size: 0.9rem;
-  background-color: white;
-  color: var(--clr-primary-pink);
-  border: 2px solid var(--clr-primary-pink);
-  border-radius: 1rem;
-  padding: 0.125rem 1rem;
-}
-
-.try-button:hover,
-.try-button:active {
-  color: var(--clr-primary-light-pink);
-  border-color: var(--clr-primary-light-pink);
-  cursor: pointer;
-}
-
-.start-button,
-.subscribe-button {
-  background-color: var(--clr-primary-pink);
-  color: white;
-  border: 0;
-  border-radius: 2rem;
-  padding: 0.75rem 3rem;
-  box-shadow: 0.125rem 0.125rem 0.25rem lightgrey;
-}
-
-.start-button:hover,
-.start-button:active,
-.subscribe-button:hover,
-.subscribe-button:active {
-  background-color: var(--clr-primary-light-pink);
-  cursor: pointer;
-}
-
-.subscribe-button {
-  border-radius: 0.25rem;
-  padding: 0.75rem 2rem;
-  box-shadow: none;
-}
-
-.footer-logo {
-  filter: invert(100%) sepia(77%) saturate(2%) hue-rotate(265deg)
-    brightness(109%) contrast(100%);
-  margin-bottom: 1rem;
-}
-
-input {
-  outline: none;
-  border: 2px solid white;
-  padding: 0.75rem;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-input:focus:invalid {
-  border: 2px solid var(--clr-primary-light-red);
-}
-
-input:focus:invalid + div::before {
-  content: "Check your email please";
-  color: var(--clr-primary-light-red);
-  font-size: 0.75rem;
-}
-
-.fa-brands {
-  font-size: 2rem;
-  margin-right: 0.5rem;
-}
-
-.fa-square-facebook:hover,
-.fa-square-facebook:active {
-  color: #0165e1;
-}
-
-.fa-instagram:hover,
-.fa-instagram:active {
-  color: #e1306c;
-}
-
-.fa-square-twitter:hover,
-.fa-square-twitter:active {
-  color: #1d9bf0;
-}
-
 /* <-- ATTRIBUTION --> */
 
 .attribution {
@@ -353,7 +366,17 @@ input:focus:invalid + div::before {
   color: var(--clr-primary-pink);
 }
 
+/* <------ TABLET SIZE ------> */
+
 @media screen and (min-width: 550px) {
+  .background-desktop {
+    display: block;
+  }
+
+  .background-mobile {
+    display: none;
+  }
+
   .title p {
     font-size: 0.8rem;
     width: 40%;
@@ -395,15 +418,9 @@ input:focus:invalid + div::before {
     margin-top: 2rem;
     grid-area: attribution;
   }
-
-  .background-desktop {
-    display: block;
-  }
-
-  .background-mobile {
-    display: none;
-  }
 }
+
+/* <------ DESKTOP SIZE ------> */
 
 @media screen and (min-width: 750px) {
   footer {
@@ -414,6 +431,17 @@ input:focus:invalid + div::before {
     grid-template-areas:
       "contact newsletter"
       "attribution attribution";
+  }
+
+  input {
+    padding: 0.125rem;
+    width: 90%;
+  }
+
+  .contact p,
+  .newsletter p {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
   }
 
   .contact {
@@ -427,22 +455,11 @@ input:focus:invalid + div::before {
     max-width: 90%;
   }
 
-  .contact p,
-  .newsletter p {
-    font-size: 0.8rem;
-    margin-bottom: 2rem;
-  }
-
   .subscribe-form {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-  }
-
-  input {
-    padding: 0.125rem;
-    width: 90%;
   }
 
   .subscribe-button {
