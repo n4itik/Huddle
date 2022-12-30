@@ -414,11 +414,6 @@ input:focus:invalid + div::before {
   .content-2 {
     flex-direction: row;
   }
-
-  .attribution {
-    margin-top: 2rem;
-    grid-area: attribution;
-  }
 }
 
 /* <------ DESKTOP SIZE ------> */
@@ -465,5 +460,10 @@ input:focus:invalid + div::before {
 
   .subscribe-button {
     padding: 0.25rem 1rem;
+  }
+
+  .attribution {
+    margin-top: 2rem;
+    grid-area: attribution;
   }
 }
