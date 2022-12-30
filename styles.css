@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* <-- VARIABLES --> */
+
+:root {
+  --clr-primary-pink: hsl(322, 100%, 66%);
+  --clr-primary-light-pink: hsl(321, 100%, 78%);
+  --clr-primary-light-red: hsl(0, 100%, 63%);
+
+  --clr-neutral-dark-cyan: hsl(192, 100%, 9%);
+  --clr-neutral-pale-blue: hsl(207, 100%, 98%);
+
+  --ff-headings: "Poppins", sans-serif;
+  --ff-body: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-weight: 400;
+  text-align: center;
+  color: var(--clr-neutral-dark-cyan);
+}
+
+header {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1,
+h2 {
+  color: black;
+  font-family: var(--ff-headings);
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--clr-neutral-dark-cyan);
+  color: white;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+footer h2 {
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.newsletter {
+  margin: 3rem auto 5rem;
+}
+
+.newsletter p {
+  margin-bottom: 5rem;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.email-input {
+  margin: 0 0 1rem 0;
+  width: 100%;
+}
+
+.contact p {
+  margin-bottom: 3rem;
+}
+
+.contact ul {
+  margin-bottom: 3rem;
+}
+
+.contact li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 0 1rem 0;
+}
+
+.contact li img {
+  margin-right: 1rem;
+}
+
+.logo {
+  max-width: 8rem;
+}
+
+.title {
+  margin-top: 7rem;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.title p {
+  margin: 1rem auto 3rem;
+}
+
+.start-button {
+  margin-bottom: 7rem;
+}
+
+.title img {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.title h2 {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+}
+
+.title ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 10rem;
+  color: grey;
+  font-size: 0.8rem;
+  margin: 3rem;
+}
+
+.title-icon {
+  max-width: 2rem;
+  align-self: flex-start;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.content img {
+  max-width: 80%;
+  margin: 0 auto 4rem;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1rem;
+}
+
+.content-1,
+.content-3 {
+  background-color: var(--clr-neutral-pale-blue);
+}
+
+.content-2 {
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+}
+
+.content-3 {
+  padding-bottom: 5rem;
+}
+
+.background {
+  width: 100%;
+}
+
+.background-desktop {
+  display: none;
+}
+
+.foot {
+  margin: 7rem auto 10rem;
+}
+
+.foot h2 {
+  margin-bottom: 3rem;
+}
+
+.try-button {
+  font-size: 0.9rem;
+  background-color: white;
+  color: var(--clr-primary-pink);
+  border: 2px solid var(--clr-primary-pink);
+  border-radius: 1rem;
+  padding: 0.125rem 1rem;
+}
+
+.try-button:hover,
+.try-button:active {
+  color: var(--clr-primary-light-pink);
+  border-color: var(--clr-primary-light-pink);
+  cursor: pointer;
+}
+
+.start-button,
+.subscribe-button {
+  background-color: var(--clr-primary-pink);
+  color: white;
+  border: 0;
+  border-radius: 2rem;
+  padding: 0.75rem 3rem;
+  box-shadow: 0.125rem 0.125rem 0.25rem lightgrey;
+}
+
+.start-button:hover,
+.start-button:active,
+.subscribe-button:hover,
+.subscribe-button:active {
+  background-color: var(--clr-primary-light-pink);
+  cursor: pointer;
+}
+
+.subscribe-button {
+  border-radius: 0.25rem;
+  padding: 0.75rem 2rem;
+  box-shadow: none;
+}
+
+.footer-logo {
+  filter: invert(100%) sepia(77%) saturate(2%) hue-rotate(265deg)
+    brightness(109%) contrast(100%);
+  margin-bottom: 1rem;
+}
+
+input {
+  outline: none;
+  border: 2px solid white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+input:focus:invalid {
+  border: 2px solid var(--clr-primary-light-red);
+}
+
+input:focus:invalid + div::before {
+  content: "Check your email please";
+  color: var(--clr-primary-light-red);
+  font-size: 0.75rem;
+}
+
+.fa-brands {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.fa-square-facebook:hover,
+.fa-square-facebook:active {
+  color: #0165e1;
+}
+
+.fa-instagram:hover,
+.fa-instagram:active {
+  color: #e1306c;
+}
+
+.fa-square-twitter:hover,
+.fa-square-twitter:active {
+  color: #1d9bf0;
+}
+
+/* <-- ATTRIBUTION --> */
+
+.attribution {
+  margin-top: 4rem;
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--clr-primary-light-pink);
+  text-decoration: none;
+}
+
+.attribution a:hover,
+.attribution a:active {
+  color: var(--clr-primary-pink);
+}
+
+@media screen and (min-width: 550px) {
+  .title p {
+    font-size: 0.8rem;
+    width: 40%;
+  }
+
+  .title ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content img {
+    max-width: 30%;
+  }
+
+  .content div {
+    margin: 0 2rem 0 4rem;
+    max-width: 40%;
+    text-align: left;
+  }
+
+  .content p {
+    font-size: 0.8rem;
+    max-width: 75%;
+  }
+
+  .content-2 {
+    flex-direction: row;
+  }
+
+  .attribution {
+    margin-top: 2rem;
+    grid-area: attribution;
+  }
+
+  .background-desktop {
+    display: block;
+  }
+
+  .background-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  footer {
+    display: grid;
+    gap: 0 3rem;
+    align-items: stretch;
+    padding: 2rem 4rem 2rem 5rem;
+    grid-template-areas:
+      "contact newsletter"
+      "attribution attribution";
+  }
+
+  .contact {
+    margin-top: 3rem;
+    max-width: 90%;
+    grid-area: contact;
+  }
+
+  .newsletter {
+    grid-area: newsletter;
+    max-width: 90%;
+  }
+
+  .contact p,
+  .newsletter p {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .subscribe-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  input {
+    padding: 0.125rem;
+    width: 90%;
+  }
+
+  .subscribe-button {
+    padding: 0.25rem 1rem;
+  }
+}
